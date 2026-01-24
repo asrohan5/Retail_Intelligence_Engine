@@ -3,6 +3,13 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+
+
+#Local Folders
+data
+logs/pipeline.log
+
+
 # C extensions
 *.so
 
