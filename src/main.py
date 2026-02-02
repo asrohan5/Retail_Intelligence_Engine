@@ -2,6 +2,7 @@ import logging
 from src.ingestion import load_and_optimize_data
 from src.metrics import *
 from src import vizualization as viz
+from src import features  # Import the new module
 
 logging.basicConfig(level=logging.INFO, format = "%(asctime)s [%(levelname)s] %(message)s")
 
@@ -37,5 +38,18 @@ def run_pipeline():
     logging.info('Pipeline Execution Completed')
 
 
-if __name__ == '__main__':
+
+    logging.info("Engineering Predictive Features...")
+    feature_matrix = features.engineer_features(df, df_raw)
+    
+
+    print("\n--- Day 6 Feature Matrix Sample ---")
+    print(feature_matrix[['spend_velocity', 'return_rate', 'whale_score']].head())
+    print(f"Total Features Generated: {feature_matrix.shape[1]}")
+    print("\n\n")
+
+
+    feature_matrix.to_csv("outputs/feature_matrix.csv")
+
+if __name__ == "__main__":
     run_pipeline()
