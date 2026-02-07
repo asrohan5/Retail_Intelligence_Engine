@@ -1,5 +1,27 @@
-This is one of the personal projects that i have taken up.
-More on this soon.
+# 🛒 Retail Intelligence Engine: Predictive Churn System
+
+
+## Business Overview
+A UK-based wholesaler faced declining customer retention. This project provides an end-to-end ML solution to predict which wholesale customers are likely to churn in the next 90 days, allowing for proactive retention campaigns.
+
+## Tech Stack
+- **Engine:** Python 3.13, Pandas (Memory Optimized)
+- **Modeling:** Scikit-Learn (Random Forest + GridSearch)
+- **Deployment:** FastAPI (REST API)
+- **MLOps:** Pytest for Unit Testing, GitHub Actions for CI/CD
+
+## Key Insights
+- **Whale Score:** High-volume customers show higher volatility.
+- **Spend Velocity:** A sudden drop in purchasing frequency is the #1 predictor of churn.
+- **Model Performance:** Achieved an ROC-AUC of **0.76**, balancing precision and recall to minimize "false alarms" for the marketing team.
+
+## Deployment
+1. **Clone & Install:** `pip install -r requirements.txt`
+2. **Run API:** `python -m src.api`
+3. **Run Tests:** `pytest`
+
+
+
 
 ## PART 2: Data Integrity Audit 
 *Executed on 10% Sample (~54k rows)*
@@ -39,3 +61,7 @@ Developed the `metrics.py` module, which serves as the core logic layer of the p
 * `calculate_rfm()`: Automates the shopper segmentation process.
 * `calculate_cohort_index()`: Normalizes transaction dates to track user behavior over time.
 * `build_executive_summary()`: Generates the final data frame used for C-suite reporting.
+
+
+
+
