@@ -3,11 +3,26 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+#####################
+# Data & Models
+data/
+outputs/
+models/*.pkl
 
+# Python environment
+venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+#####################
 
 #Local Folders
 data
 logs/pipeline.log
+test.py
 
 
 # C extensions
