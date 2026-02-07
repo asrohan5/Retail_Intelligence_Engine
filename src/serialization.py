@@ -21,5 +21,5 @@ def load_production_model():
     
 
     logging.info(f'loading model from model/')
-    artifacts= joblib.load('models/retaill_churn_v1.pkl')
+    artifacts= joblib.load('models/retail_churn_v1.pkl')
     return artifacts
